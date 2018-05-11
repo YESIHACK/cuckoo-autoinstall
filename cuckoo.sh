@@ -261,6 +261,7 @@ echo -e '\e[35m[+] Creating Cuckoo User \e[0m'
 
 	#Creates cuckoo system user
 	adduser --system cuckoo >/dev/null 2>&1
+	addgroup --system cuckoo >/dev/null 2>&1
 	usermod -L cuckoo
 	usermod -a -G kvm cuckoo
 	usermod -a -G libvirtd cuckoo
